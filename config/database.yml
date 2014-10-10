@@ -1,0 +1,6 @@
+production:
+  adapter:
+  database: 
+  username: 
+  password: 
+  encoding: utf8
