@@ -1,7 +1,6 @@
 FROM ubuntu:14.04
 
-RUN /usr/bin/apt-get update
-RUN /usr/bin/apt-get install -qy --no-install-recommends wget unzip ruby1.9.1 bundler thin libmysqlclient-dev libpq-dev nodejs ruby1.9.1-dev make gcc g++
+RUN /usr/bin/apt-get update && /usr/bin/apt-get install -qy --no-install-recommends wget unzip ruby1.9.1 bundler thin libmysqlclient-dev libpq-dev nodejs ruby1.9.1-dev make gcc g++
 ADD puppet-dashboard /puppet-dashboard
 WORKDIR puppet-dashboard
 RUN /bin/bash -c -l 'bundle install --without development test postgresql'
