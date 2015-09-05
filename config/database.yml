@@ -1,6 +1,8 @@
+# Either specify values here or pass them in using run -e
 production:
-  adapter:
-  database: 
-  username: 
-  password: 
+  adapter: <%= ENV['DB_ADAPTER'] %>
+  database: <%= ENV['DB_DATABASE'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  hostname: <%= ENV['DB_HOSTNAME'] %>
   encoding: utf8

@@ -1,1 +1,5 @@
-secret_token: secret_token_here
+# Specify a default value here if you'd like
+# If not, a default token will be generated on docker build
+#secret_token: secret_token_here
+
+dummy_key: dummy_value
