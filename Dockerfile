@@ -13,4 +13,4 @@ ADD init-settings.rb /scripts/init-settings.rb
 RUN /usr/bin/ruby /scripts/init-settings.rb \
    && EXECJS_RUNTIME=Node /usr/bin/ruby /usr/bin/bundle exec /usr/local/bin/rake assets:precompile
 EXPOSE 8080
-CMD /usr/bin/ruby /usr/bin/bundle exec /usr/local/bin/unicorn -E production -c /config/unicorn-config.rb /puppet-dashboard/config.ru
+CMD ["/usr/bin/ruby", "/usr/bin/bundle", "exec", "/usr/local/bin/unicorn", "-E", "production", "-c", "/config/unicorn-config.rb", "/puppet-dashboard/config.ru"]
